@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         setSupportActionBar(binding.toolBar)
 
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment))
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment,R.id.welcomeOnBoardingFragment))
         setupActionBarWithNavController(navController,appBarConfiguration)
 
     }

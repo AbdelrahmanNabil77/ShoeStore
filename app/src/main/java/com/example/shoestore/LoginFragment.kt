@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isNotEmpty
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.shoestore.databinding.FragmentLoginBinding
@@ -23,9 +24,37 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.btnLogin.setOnClickListener {
-//            val action=LoginFragmentDirections.actionLoginFragmentToWelcomeOnBoardingFragment()
-//            findNavController().navigate(action)
-//        }
+        binding.btnLogin.setOnClickListener {
+            if (isInputValid()) {
+                navigateToWelcomeScreen()
+            }
+
+        }
+        binding.btnJoin.setOnClickListener {
+            if (isInputValid()) {
+                navigateToWelcomeScreen()
+            }
+        }
+    }
+
+    private fun navigateToWelcomeScreen() {
+        val action = LoginFragmentDirections.actionLoginFragmentToWelcomeOnBoardingFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun isEmailValid(): Boolean {
+        return !binding.tietEmail.text.isNullOrEmpty()
+    }
+
+    private fun isPasswordValid(): Boolean {
+        return !binding.tietPassword.text.isNullOrEmpty()
+    }
+
+    private fun isInputValid(): Boolean {
+        binding.tilEmail.error=requireContext().getText(R.string.please_enter_valid_email)
+        binding.tilPassword.error=requireContext().getText(R.string.please_enter_valid_password)
+        binding.tilEmail.isErrorEnabled = !isEmailValid()
+        binding.tilPassword.isErrorEnabled = !isPasswordValid()
+        return isEmailValid() && isPasswordValid()
     }
 }
