@@ -8,4 +8,10 @@
     <string name="email">Email</string>
     <string name="please_enter_valid_email">Please enter a valid email</string>
     <string name="please_enter_valid_password">Please enter a valid password</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoe_list">Shoe list</string>
+    <string name="shoe_details">Shoe details</string>
+    <string name="welcome_main_text">Welcome to our shoe store, as they always, clothes make a man.</string>
+    <string name="instructions_text_in_welcome_screen">Kindly find the instructions in the next screen.</string>
 </resources>
