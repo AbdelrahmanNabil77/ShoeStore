@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="10dp"
+        android:elevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_brand_label"
+                style="@style/cardview_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/brand" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                style="@style/cardview_item"
+                app:layout_constraintBottom_toBottomOf="@id/tv_brand_label"
+                app:layout_constraintStart_toEndOf="@id/tv_brand_label"
+                app:layout_constraintTop_toTopOf="@id/tv_brand_label"
+                android:text="@={shoeDetails.brand}" />
+
+            <TextView
+                android:id="@+id/tv_size_label"
+                style="@style/cardview_label"
+                app:layout_constraintBottom_toBottomOf="@id/tv_brand_label"
+                app:layout_constraintEnd_toStartOf="@id/tv_size"
+                app:layout_constraintTop_toTopOf="@id/tv_brand_label"
+                android:text="@string/size" />
+
+            <TextView
+                android:id="@+id/tv_size"
+                style="@style/cardview_item"
+                app:layout_constraintBottom_toBottomOf="@id/tv_size_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_size_label"
+                android:text="@={shoeDetails.shoeSize}" />
+
+            <TextView
+                android:id="@+id/tv_category_label"
+                style="@style/cardview_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_brand_label"
+                android:text="@string/category" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                style="@style/cardview_item"
+                app:layout_constraintBottom_toBottomOf="@id/tv_category_label"
+                app:layout_constraintStart_toEndOf="@id/tv_category_label"
+                app:layout_constraintTop_toTopOf="@id/tv_category_label"
+                android:text="@={shoeDetails.category}" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/cardview_item"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_category_label"
+                android:layout_margin="10dp"
+                android:text="@={shoeDetails.description}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="shoeDetails"
+            type="com.example.shoestore.ShoeDetails" />
+    </data>
+
+
+</layout>

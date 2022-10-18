@@ -17,4 +17,7 @@
     <string name="main_instructions">You can add a new shoe with many details attributes. You cann add brand, category, size, and description for each shoe.</string>
     <string name="join_now_instructions">what are you waiting? start your own shop right now!</string>
     <string name="start">Start</string>
+    <string name="category">Category:</string>
+    <string name="size">Size:</string>
+    <string name="brand">Brand:</string>
 </resources>

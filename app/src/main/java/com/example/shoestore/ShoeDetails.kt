@@ -1,8 +1,8 @@
 package com.example.shoestore
 
 data class ShoeDetails(
-    val brand:String,
-    val size:Double,
-    val category:String,
-    val description:String
+    var brand:String,
+    var shoeSize:String,
+    var category:String,
+    var description:String
 )

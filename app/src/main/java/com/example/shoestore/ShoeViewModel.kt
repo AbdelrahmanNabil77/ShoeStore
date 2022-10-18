@@ -4,9 +4,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ShoeViewModel:ViewModel() {
-    val arrayListShoeList= arrayListOf<ShoeDetails>()
-    val shoeLiveData:MutableLiveData<ArrayList<ShoeDetails>> = MutableLiveData(arrayListShoeList)
+    private val arrayListShoeList= arrayListOf<ShoeDetails>()
+    val shoeLiveData:MutableLiveData<ShoeDetails> = MutableLiveData()
     fun addShoe(shoe:ShoeDetails){
-        arrayListShoeList.add(shoe)
+        shoeLiveData.postValue(shoe)
     }
 }
