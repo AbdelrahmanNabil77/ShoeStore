@@ -14,4 +14,7 @@
     <string name="shoe_details">Shoe details</string>
     <string name="welcome_main_text">Welcome to our shoe store, as they always, clothes make a man.</string>
     <string name="instructions_text_in_welcome_screen">Kindly find the instructions in the next screen.</string>
+    <string name="main_instructions">You can add a new shoe with many details attributes. You cann add brand, category, size, and description for each shoe.</string>
+    <string name="join_now_instructions">what are you waiting? start your own shop right now!</string>
+    <string name="start">Start</string>
 </resources>

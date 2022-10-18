@@ -14,7 +14,7 @@
             android:text="@string/welcome_main_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            style="@style/main_title_style" />
+            style="@style/main_topic_header_style" />
 
         <TextView
             android:id="@+id/instructions_label"
@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/main_title_style"
+            style="@style/main_topic_header_style"
             />
 
         <androidx.appcompat.widget.AppCompatButton

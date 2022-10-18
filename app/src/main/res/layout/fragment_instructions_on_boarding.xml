@@ -2,16 +2,29 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         tools:context=".InstructionsOnBoardingFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
+            style="@style/main_topic_header_style"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:text="@string/main_instructions" />
 
-    </FrameLayout>
+        <TextView
+            style="@style/main_topic_header_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/join_now_instructions" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start" />
+    </LinearLayout>
 </layout>
