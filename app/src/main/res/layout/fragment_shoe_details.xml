@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="shoeDetails"
-            type="com.example.shoestore.ShoeDetails" />
+            type="com.example.shoestore.model.ShoeDetails" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"

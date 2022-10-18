@@ -1,4 +1,4 @@
-package com.example.shoestore
+package com.example.shoestore.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.example.shoestore.R
 import com.example.shoestore.databinding.FragmentLoginBinding
 
 
@@ -37,7 +38,8 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateToWelcomeScreen() {
-        val action = LoginFragmentDirections.actionLoginFragmentToWelcomeOnBoardingFragment()
+        val action =
+            LoginFragmentDirections.actionLoginFragmentToWelcomeOnBoardingFragment()
         findNavController().navigate(action)
     }
 

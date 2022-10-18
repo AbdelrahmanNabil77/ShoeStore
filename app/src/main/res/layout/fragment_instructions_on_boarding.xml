@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".InstructionsOnBoardingFragment">
+        tools:context=".view.InstructionsOnBoardingFragment">
 
         <TextView
             style="@style/main_topic_header_style"

@@ -1,4 +1,4 @@
-package com.example.shoestore
+package com.example.shoestore.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

@@ -1,4 +1,4 @@
-package com.example.shoestore
+package com.example.shoestore.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
+import com.example.shoestore.R
+import com.example.shoestore.model.ShoeDetails
+import com.example.shoestore.viewmodel.ShoeViewModel
 import com.example.shoestore.databinding.FragmentShoeListingBinding
 import com.example.shoestore.databinding.ItemShoeBinding
 
@@ -33,7 +35,8 @@ class ShoeListingFragment : Fragment() {
 
     private fun onClickListener() {
         binding.fabAddShoe.setOnClickListener {
-            val action=ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailsFragment()
+            val action=
+                ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailsFragment()
             findNavController().navigate(action)
         }
     }

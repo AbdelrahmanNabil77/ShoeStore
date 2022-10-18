@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.shoestore.LoginFragment"
+        android:name="com.example.shoestore.view.LoginFragment"
         android:label="@string/login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeOnBoardingFragment"
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeOnBoardingFragment"
-        android:name="com.example.shoestore.WelcomeOnBoardingFragment"
+        android:name="com.example.shoestore.view.WelcomeOnBoardingFragment"
         android:label="@string/welcome" >
         <action
             android:id="@+id/action_welcomeOnBoardingFragment_to_instructionsOnBoardingFragment"
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionsOnBoardingFragment"
-        android:name="com.example.shoestore.InstructionsOnBoardingFragment"
+        android:name="com.example.shoestore.view.InstructionsOnBoardingFragment"
         android:label="@string/instructions">
         <action
             android:id="@+id/action_instructionsOnBoardingFragment_to_shoeListingFragment"
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
-        android:name="com.example.shoestore.ShoeListingFragment"
+        android:name="com.example.shoestore.view.ShoeListingFragment"
         android:label="@string/shoe_list">
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailsFragment"
@@ -44,6 +44,6 @@
     </fragment>
     <fragment
         android:id="@+id/shoeDetailsFragment"
-        android:name="com.example.shoestore.ShoeDetailsFragment"
+        android:name="com.example.shoestore.view.ShoeDetailsFragment"
         android:label="@string/shoe_details" />
 </navigation>
