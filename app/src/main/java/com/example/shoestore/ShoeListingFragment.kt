@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.MutableLiveData
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.databinding.FragmentShoeListingBinding
 import com.example.shoestore.databinding.ItemShoeBinding
 
@@ -26,15 +28,21 @@ class ShoeListingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observe()
+        onClickListener()
+    }
+
+    private fun onClickListener() {
         binding.fabAddShoe.setOnClickListener {
-            val shoe=ShoeDetails("nike","47","sports","agmad wa7ed")
-            viewModel.addShoe(shoe)
+            val action=ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailsFragment()
+            findNavController().navigate(action)
         }
     }
 
     private fun observe(){
-        viewModel.shoeLiveData.observe(viewLifecycleOwner,{
-                addShoeToLayout(it)
+        viewModel.shoeList.observe(viewLifecycleOwner,{
+                it.forEach {
+                    addShoeToLayout(it)
+                }
         })
     }
 

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isNotEmpty
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.shoestore.databinding.FragmentLoginBinding
@@ -51,8 +50,8 @@ class LoginFragment : Fragment() {
     }
 
     private fun isInputValid(): Boolean {
-        binding.tilEmail.error=requireContext().getText(R.string.please_enter_valid_email)
-        binding.tilPassword.error=requireContext().getText(R.string.please_enter_valid_password)
+        binding.tilEmail.error=requireContext().getText(R.string.email_error_msg)
+        binding.tilPassword.error=requireContext().getText(R.string.password_error_msg)
         binding.tilEmail.isErrorEnabled = !isEmailValid()
         binding.tilPassword.isErrorEnabled = !isPasswordValid()
         return isEmailValid() && isPasswordValid()

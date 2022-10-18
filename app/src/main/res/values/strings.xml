@@ -6,8 +6,8 @@
     <string name="join_now">Join now</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="please_enter_valid_email">Please enter a valid email</string>
-    <string name="please_enter_valid_password">Please enter a valid password</string>
+    <string name="email_error_msg">Please enter a valid email</string>
+    <string name="password_error_msg">Please enter a valid password</string>
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions</string>
     <string name="shoe_list">Shoe list</string>
@@ -20,4 +20,10 @@
     <string name="category">Category:</string>
     <string name="size">Size:</string>
     <string name="brand">Brand:</string>
+    <string name="description">Description:</string>
+    <string name="add_shoe">Add shoe</string>
+    <string name="size_error_msg">You should add size</string>
+    <string name="category_error_msg">You should add category</string>
+    <string name="brand_error_msg">You should add brand</string>
+    <string name="description_error_msg">You should add description</string>
 </resources>
